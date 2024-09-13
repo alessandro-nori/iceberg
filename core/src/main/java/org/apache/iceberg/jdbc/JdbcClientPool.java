@@ -32,7 +32,7 @@ import org.apache.iceberg.ClientPoolImpl;
 import org.apache.iceberg.relocated.com.google.common.collect.ImmutableSet;
 import org.apache.iceberg.relocated.com.google.common.collect.Sets;
 
-public class JdbcClientPool extends ClientPoolImpl<Connection, SQLException> {
+public class JdbcClientPool extends ClientPoolImpl<Connection, SQLException> implements ConnectionClientPool {
 
   /**
    * The following are common retryable SQLSTATEs error codes which are generic across vendors.
